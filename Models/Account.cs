@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BankingApplication.Models
 {
-    internal class Account
+    public class Account
     {
+        public int AccountId { get; set; }
+        public int UserId { get; set; }
+        public string AccountType { get; set; } // Savings or Current
+        public decimal Balance { get; set; }
     }
 }
