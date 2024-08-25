@@ -27,7 +27,9 @@ namespace BankingApplication.DataAccessLayer
                                 UserId INTEGER PRIMARY KEY AUTOINCREMENT,
                                 Name TEXT NOT NULL,
                                 Address TEXT NOT NULL,
-                                Password TEXT NOT NULL
+                                Password TEXT NOT NULL,
+                                PhoneNumber TEXT NOT NULL,
+                                Email TEXT NOT NULL
                             );";
 
                 string accountTable = @"CREATE TABLE IF NOT EXISTS Accounts (

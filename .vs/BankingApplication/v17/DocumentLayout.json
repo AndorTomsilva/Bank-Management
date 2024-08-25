@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:businesslogiclayer\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:presentationlayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\businesslogiclayer\\transactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:businesslogiclayer\\transactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\dataaccesslayer\\sqlitedatabasehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,16 +27,12 @@
       "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\businesslogiclayer\\securitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:businesslogiclayer\\securitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\businesslogiclayer\\transactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|solutionrelative:businesslogiclayer\\transactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41CF7774-23F4-4170-A3C7-ED54D6F11ABB}|BankingApplication.csproj|c:\\users\\user\\desktop\\bank\\bankingapplication\\bankingapplication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -50,7 +50,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Transaction.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\Models\\Transaction.cs",
               "RelativeDocumentMoniker": "Models\\Transaction.cs",
@@ -58,11 +58,12 @@
               "RelativeToolTip": "Models\\Transaction.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T15:07:32.439Z"
+              "WhenOpened": "2024-08-23T15:07:32.439Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\Models\\Account.cs",
               "RelativeDocumentMoniker": "Models\\Account.cs",
@@ -70,11 +71,12 @@
               "RelativeToolTip": "Models\\Account.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T15:07:06.715Z"
+              "WhenOpened": "2024-08-23T15:07:06.715Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SecurityManager.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\BusinessLogicLayer\\SecurityManager.cs",
               "RelativeDocumentMoniker": "BusinessLogicLayer\\SecurityManager.cs",
@@ -86,15 +88,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "TransactionManager.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\BusinessLogicLayer\\TransactionManager.cs",
               "RelativeDocumentMoniker": "BusinessLogicLayer\\TransactionManager.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\BusinessLogicLayer\\TransactionManager.cs",
               "RelativeToolTip": "BusinessLogicLayer\\TransactionManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T15:04:47.288Z"
+              "WhenOpened": "2024-08-23T15:04:47.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -104,45 +107,46 @@
               "RelativeDocumentMoniker": "BusinessLogicLayer\\AccountManager.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\BusinessLogicLayer\\AccountManager.cs",
               "RelativeToolTip": "BusinessLogicLayer\\AccountManager.cs",
-              "ViewState": "AQIAAFcAAABgVrJ0nBgrwHgAAAAZAAAA",
+              "ViewState": "AQIAAHYAAAAAJrtGFloTwAABAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T15:04:17.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SQLiteDatabaseHandler.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\DataAccessLayer\\SQLiteDatabaseHandler.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\SQLiteDatabaseHandler.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\DataAccessLayer\\SQLiteDatabaseHandler.cs",
               "RelativeToolTip": "DataAccessLayer\\SQLiteDatabaseHandler.cs",
-              "ViewState": "AQIAABoAAAAAlX708mEOwEIAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T15:03:29.422Z"
+              "WhenOpened": "2024-08-23T15:03:29.422Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\PresentationLayer\\Program.cs",
               "RelativeDocumentMoniker": "PresentationLayer\\Program.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\PresentationLayer\\Program.cs",
               "RelativeToolTip": "PresentationLayer\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH0AAAAoAAAA",
+              "ViewState": "AQIAABYAAAAAQLW58kwCwIcAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T14:57:52.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Bank\\BankingApplication\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T15:07:55.318Z",
               "EditorCaption": ""

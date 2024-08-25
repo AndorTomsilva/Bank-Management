@@ -39,8 +39,8 @@ namespace BankingApplication.BusinessLogicLayer
                     user.UserId = GenerateRandomNumber(11);
 
                     // Insert the user into the Users table
-                    string userQuery = @"INSERT INTO Users (UserId, Name, Address, Password) 
-                                         VALUES (@UserId, @Name, @Address, @Password);";
+                    string userQuery = @"INSERT INTO Users (UserId, Name, Address, Password, PhoneNumber, Email) 
+                                 VALUES (@UserId, @Name, @Address, @Password, @PhoneNumber, @Email);";
 
                     using (var userCommand = new SQLiteCommand(userQuery, connection))
                     {
@@ -48,6 +48,8 @@ namespace BankingApplication.BusinessLogicLayer
                         userCommand.Parameters.AddWithValue("@Name", user.Name);
                         userCommand.Parameters.AddWithValue("@Address", user.Address);
                         userCommand.Parameters.AddWithValue("@Password", user.Password);
+                        userCommand.Parameters.AddWithValue("@PhoneNumber", user.PhoneNumber);
+                        userCommand.Parameters.AddWithValue("@Email", user.Email);
 
                         userCommand.ExecuteNonQuery();
                     }
@@ -57,7 +59,7 @@ namespace BankingApplication.BusinessLogicLayer
 
                     // Create an account for the new user
                     string accountQuery = @"INSERT INTO Accounts (AccountId, UserId, AccountType, Balance) 
-                                            VALUES (@AccountId, @UserId, 'Savings', @Balance);";
+                                    VALUES (@AccountId, @UserId, 'Savings', @Balance);";
 
                     using (var accountCommand = new SQLiteCommand(accountQuery, connection))
                     {
@@ -76,6 +78,7 @@ namespace BankingApplication.BusinessLogicLayer
                 }
             }
         }
+
 
         public void CreateAccount(Account account)
             {
@@ -111,18 +114,18 @@ namespace BankingApplication.BusinessLogicLayer
 
                     if (result != null && result != DBNull.Value)
                     {
-                        // Cast to double and then convert to decimal
-                        double balanceAsDouble = (double)result;
-                        return Convert.ToDecimal(balanceAsDouble);
+                        return Convert.ToDecimal(result);
                     }
                     else
                     {
-                        Console.WriteLine("Account not found. ");
-                       // throw new Exception("Account not found.");
+                        throw new Exception("Account not found.");
                     }
                 }
             }
         }
+
+
+
 
         public void Deposit(int accountId, decimal amount)
             {
@@ -140,41 +143,86 @@ namespace BankingApplication.BusinessLogicLayer
                     }
 
                     LogTransaction(accountId, amount, "Deposit");
+
                 }
-            }
+          
+        }
 
-            public void Withdraw(int accountId, decimal amount)
+       
+
+
+
+        public void Withdraw(int accountId, decimal amount)
+        {
+            const int maxRetries = 3;
+            int attempts = 0;
+            bool success = false;
+
+            while (attempts < maxRetries && !success)
             {
-                using (var connection = new SQLiteConnection(SQLiteDatabaseHandler.ConnectionString))
+                try
                 {
-                    connection.Open();
+                    attempts++;
+                    // Withdraw logic here...
 
-                    string balanceQuery = @"SELECT Balance FROM Accounts WHERE AccountId = @AccountId;";
-                    using (var balanceCommand = new SQLiteCommand(balanceQuery, connection))
+                    using (var connection = new SQLiteConnection(SQLiteDatabaseHandler.ConnectionString))
                     {
-                        balanceCommand.Parameters.AddWithValue("@AccountId", accountId);
-                        var balance = (decimal)balanceCommand.ExecuteScalar();
-
-                        if (balance < amount)
+                        connection.Open();
+                        using (var transaction = connection.BeginTransaction())
                         {
-                            throw new InvalidOperationException("Insufficient funds.");
+                            try
+                            {
+                                decimal currentBalance = GetBalance(accountId);
+
+                                if (currentBalance >= amount)
+                                {
+                                    decimal newBalance = currentBalance - amount;
+
+                                    string query = "UPDATE Accounts SET Balance = @Balance WHERE AccountId = @AccountId;";
+                                    using (var command = new SQLiteCommand(query, connection))
+                                    {
+                                        command.Parameters.AddWithValue("@Balance", newBalance);
+                                        command.Parameters.AddWithValue("@AccountId", accountId);
+
+                                        command.ExecuteNonQuery();
+                                    }
+
+                                    transaction.Commit();
+                                    Console.WriteLine($"Withdrawal successful. New balance: {newBalance:C}");
+                                    // Send notification, etc.
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Insufficient funds.");
+                                }
+                            }
+                            catch (Exception)
+                            {
+                                transaction.Rollback();
+                                throw;
+                            }
                         }
                     }
 
-                    string query = @"UPDATE Accounts SET Balance = Balance - @Amount WHERE AccountId = @AccountId;";
-
-                    using (var command = new SQLiteCommand(query, connection))
+                    success = true; // Set this if the operation succeeds
+                }
+                catch (SQLiteException ex) when (ex.Message.Contains("database is locked"))
+                {
+                    if (attempts == maxRetries)
                     {
-                        command.Parameters.AddWithValue("@Amount", amount);
-                        command.Parameters.AddWithValue("@AccountId", accountId);
-                        command.ExecuteNonQuery();
+                        throw new Exception("Failed to complete the operation after multiple attempts.", ex);
                     }
 
-                    LogTransaction(accountId, amount, "Withdrawal");
+                    // Optionally, add a delay before retrying
+                    System.Threading.Thread.Sleep(100);
                 }
             }
+        }
 
-            private void LogTransaction(int accountId, decimal amount, string transactionType)
+
+
+
+        private void LogTransaction(int accountId, decimal amount, string transactionType)
             {
                 using (var connection = new SQLiteConnection(SQLiteDatabaseHandler.ConnectionString))
                 {
@@ -213,6 +261,31 @@ namespace BankingApplication.BusinessLogicLayer
                 }
             }
         }
+
+
+        public void FreezeAccount(int accountId)
+{
+    using (var connection = new SQLiteConnection(SQLiteDatabaseHandler.ConnectionString))
+    {
+        connection.Open();
+
+        string query = "UPDATE Accounts SET IsFrozen = 1 WHERE AccountId = @AccountId;";
+        using (var command = new SQLiteCommand(query, connection))
+        {
+            command.Parameters.AddWithValue("@AccountId", accountId);
+            int rowsAffected = command.ExecuteNonQuery();
+
+            if (rowsAffected > 0)
+            {
+                Console.WriteLine("Your account has been successfully frozen due to suspected fraudulent activity.");
+            }
+            else
+            {
+                Console.WriteLine("Account not found or already frozen.");
+            }
+        }
+    }
+}
 
     }
 }

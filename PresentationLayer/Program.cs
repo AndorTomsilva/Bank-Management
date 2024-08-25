@@ -188,3 +188,19 @@ static void Login(AccountManager accountManager)
     }
 }
 
+static void FreezeAccount(AccountManager accountManager)
+{
+    Console.Write("Enter the USSD code to freeze your account: ");
+    string ussdCode = Console.ReadLine();
+
+    if (ussdCode == "*391#")  // Example USSD code
+    {
+        Console.Write("Enter your Account ID: ");
+        int accountId = int.Parse(Console.ReadLine());
+        accountManager.FreezeAccount(accountId);
+    }
+    else
+    {
+        Console.WriteLine("Invalid USSD code.");
+    }
+}
